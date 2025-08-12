@@ -1,0 +1,3 @@
+crewai[tools]
+ollama
+google-generativeai
