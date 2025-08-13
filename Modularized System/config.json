@@ -1,0 +1,26 @@
+{
+    "llm": {
+        "provider": "google",
+        "config": {
+            "model": "gemini-2.5-flash",
+            "api_key": "${GOOGLE_API_KEY}",
+            "temperature": 0.5,
+            "max_tokens": 4096
+        }
+    },
+    "rag_tool_config": {
+        "llm": {
+            "provider": "google",
+            "config": {
+                "model": "gemini-2.5-flash",
+                "api_key": "${GOOGLE_API_KEY}"
+            }
+        },
+        "embedding_model": {
+            "provider": "ollama",
+            "config": {
+                "model": "all-minilm:latest"
+            }
+        }
+    }
+}
