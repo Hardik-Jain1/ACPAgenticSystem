@@ -1,3 +1,4 @@
 crewai[tools]
 ollama
 google-generativeai
+acp-sdk
