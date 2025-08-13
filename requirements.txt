@@ -3,3 +3,4 @@ ollama
 google-generativeai
 acp-sdk
 smolagents[toolkit]
+mcp[cli]
