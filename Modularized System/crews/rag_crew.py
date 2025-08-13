@@ -18,3 +18,6 @@ class RAGCrew:
 
     def run(self):
         return self.crew.kickoff()
+    
+    async def run_async(self):
+        return await self.crew.kickoff_async()
