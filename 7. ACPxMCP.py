@@ -23,12 +23,12 @@ server = Server()
 async def health_agent(input: list[Message],
                        context: Context) -> AsyncGenerator[RunYield, RunYieldResume]:
     """
-    This is a CodeAgent which supports the hospital to handle health based questions for patients. Current or prospective patients can use it to find answers about their health and hospital treatments."""
+    This is an Agent which supports the hospital to handle health based questions for patients. Current or prospective patients can use it to find answers about their health and hospital treatments."""
     #
     #agent defination
     with ToolCollection.from_mcp(server_parameters, trust_remote_code=True) as tool_collection:
         agent = ToolCallingAgent(model=model,
-                                tools=[*tool_collection.tools])
+                                tools=[*tool_collection.tools, DuckDuckGoSearchTool(), VisitWebpageTool()])
         prompt = input[0].parts[0].content
         task_output = agent.run(prompt)
     #

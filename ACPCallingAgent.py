@@ -84,7 +84,7 @@ async def router_agent() -> None:
 async def run_router_agent() -> None:
     router_agent = await router_agent()
     
-    final_output = router_agent.run("What are the recommended hospital treatments and recovery guidelines for shoulder reconstruction surgery and what is the waiting period for rehabilitation after a shoulder reconstruction from my insurance?")
+    final_output = router_agent.run("What are the recommended hospital treatments and recovery guidelines for shoulder reconstruction injury and what is the waiting period for rehabilitation after a shoulder reconstruction from my insurance?")
 
     print("Final Output: \n", final_output)
 
