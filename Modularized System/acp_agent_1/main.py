@@ -1,4 +1,4 @@
-from crews.rag_crew import RAGCrew
+from agent_1.crews.rag_crew import RAGCrew
 
 def main():
     rag_crew= RAGCrew()
