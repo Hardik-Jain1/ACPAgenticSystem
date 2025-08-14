@@ -78,7 +78,7 @@ The system consists of multiple components working together:
 ## Project Structure
 
 ```
-Multi Agent System/
+Modularized System/
 ├── README.md                              # This documentation file
 ├── router_agent.py                        # Main entry point - Router Agent
 ├── mcp_server.py                          # Tool orchestrator using FastMCP
