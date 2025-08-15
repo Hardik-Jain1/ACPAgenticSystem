@@ -2,6 +2,21 @@
 
 This modularized system implements a sophisticated multi-agent AI architecture designed to handle healthcare and insurance-related queries through a distributed system of specialized agents, servers, and tools.
 
+## 📚 Table of Contents
+
+- [🏗️ System Architecture](#️-system-architecture)
+  - [📊 System Flow Diagram](#-system-flow-diagram)
+  - [🔄 Component Interaction Flow](#-component-interaction-flow)
+- [🚀 Components Overview](#-components-overview)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📁 Project Structure](#-project-structure)
+- [📋 Prerequisites](#-prerequisites)
+- [🚀 Installation & Setup](#-installation--setup)
+- [🏃‍♂️ Running the System](#️-running-the-system)
+- [💡 Usage Examples](#-usage-examples)
+- [🏗️ System Features](#️-system-features)
+- [🤝 Contributing](#-contributing)
+
 ## 🏗️ System Architecture
 
 The system consists of multiple components working together:
@@ -209,49 +224,6 @@ uv run router_agent.py
 - "Find me cardiologists in Georgia"
 - "What treatments are available for high blood pressure?"
 
-## 🔧 Configuration
-
-### ACP Agent 1 Configuration (`acp_agent_1/config.json`)
-```json
-{
-    "llm": {
-        "provider": "google",
-        "config": {
-            "model": "gemini-2.5-flash",
-            "api_key": "${GOOGLE_API_KEY}",
-            "temperature": 0.5,
-            "max_tokens": 4096
-        }
-    },
-    "rag_tool_config": {
-        "llm": {
-            "provider": "google",
-            "config": {
-                "model": "gemini-2.5-flash",
-                "api_key": "${GOOGLE_API_KEY}"
-            }
-        },
-        "embedding_model": {
-            "provider": "ollama",
-            "config": {
-                "model": "all-minilm:latest"
-            }
-        }
-    }
-}
-```
-
-## 🗄️ Data Sources
-
-### Insurance Policy Documents
-- **Location**: `acp_agent_1/data/gold-hospital-and-premium-extras.pdf`
-- **Purpose**: Source material for RAG system to answer policy coverage questions
-
-### Doctor Database
-- **Location**: `acp_agent_2/doctors.json`
-- **Content**: Comprehensive database with many doctors across various specialties
-- **Fields**: Name, specialty, address, contact info, education, affiliations, insurance accepted
-
 ## 🏗️ System Features
 
 ### � **MCP-Powered Tool Orchestration**
@@ -284,18 +256,10 @@ uv run router_agent.py
 - **ACP Agents → Specialized Tools**: Internal tool orchestration (CrewAI, SmoLAgents, etc.)
 - **Response Aggregation**: Results flow back through the protocol stack to the user
 
-## 🔮 Future Enhancements
-
-1. **Multi-Language Support**: Extend to support multiple languages
-2. **Advanced Analytics**: Add usage analytics and performance monitoring
-3. **Real-time Updates**: Dynamic updating of doctor database and policy documents
-4. **Voice Interface**: Add voice input/output capabilities
-5. **Mobile Integration**: Develop mobile app interface
-
 ## 🤝 Contributing
 
 This system demonstrates advanced multi-agent AI architecture patterns and can be extended for various domain-specific applications.
 
 ---
 
-*This multi-agent system showcases the power of distributed AI architectures, combining specialized agents, advanced communication protocols, and modern AI tools to create a comprehensive healthcare and insurance assistant.*
+*This multi-agent system showcases the power of distributed AI architectures, combining specialized agents and tools using advanced communication protocols.*
