@@ -296,10 +296,6 @@ uv run router_agent.py
 
 This system demonstrates advanced multi-agent AI architecture patterns and can be extended for various domain-specific applications.
 
-## 📄 License
-
-This project is part of the ACP (Agent Communication Protocol) learning resources.
-
 ---
 
 *This multi-agent system showcases the power of distributed AI architectures, combining specialized agents, advanced communication protocols, and modern AI tools to create a comprehensive healthcare and insurance assistant.*
