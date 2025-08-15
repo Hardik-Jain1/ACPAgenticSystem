@@ -1,6 +1,6 @@
 # Multi-Agent AI System - Healthcare & Insurance Assistant
 
-This system implements a sophisticated multi-agent AI architecture designed to handle healthcare and insurance-related queries through a distributed system of specialized agents, servers, and tools.
+This modularized system implements a sophisticated multi-agent AI architecture designed to handle healthcare and insurance-related queries through a distributed system of specialized agents, servers, and tools.
 
 ## 🏗️ System Architecture
 
@@ -8,11 +8,11 @@ The system consists of multiple components working together:
 
 ### 📊 System Flow Diagram
 
-![alt text](multi_agent_system_flow_diag.png)
+![alt text](<multi_agent_system_flow_diag.png>)
 
 ### 🔄 Component Interaction Flow
 
-![alt text](multi_agent_system_seq_diag.png)
+![alt text](<multi_agent_system_seq_diag.png>)
 
 ## 🚀 Components Overview
 
@@ -67,7 +67,7 @@ The system consists of multiple components working together:
   - CrewAI (Policy Agent orchestration)
 - **Communication**: 
   - ACP SDK (Agent Communication Protocol)
-  - MCP (Model Context Protocol)
+  - MCP SDK (Model Context Protocol)
 - **LLM Models**:
   - Qwen 2.5:7b (via Ollama) for SmoLAgents
   - Google Gemini 2.5 Flash for CrewAI
@@ -91,19 +91,14 @@ Modularized System/
 │   │
 │   ├── agents/                            # CrewAI Agent definitions
 │   │   ├── crew_agents.py                 # Insurance coverage specialist agent
-│   │
 │   ├── crews/                             # CrewAI workflow orchestration
 │   │   ├── rag_crew.py                    # RAG crew workflow definition
-│   │
 │   ├── tasks/                             # CrewAI Task definitions
 │   │   ├── crew_tasks.py                  # Insurance query tasks
-│   │
 │   ├── tools/                             # Custom RAG tools
 │   │   ├── crew_tools.py                  # RAG tool implementation
-│   │
 │   ├── data/                              # Document sources
 │   │   └── gold-hospital-and-premium-extras.pdf  # Insurance policy document
-│   │
 │   └── db/                                # Vector database storage
 │       ├── chroma.sqlite3                 # Chroma database file
 │
@@ -155,7 +150,7 @@ Modularized System/
 
 1. **Install Dependencies**:
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 2. **Environment Configuration**:
@@ -177,29 +172,29 @@ The system requires multiple components to be running simultaneously. Start them
 ### Terminal 1: ACP Agent 1 (Policy Agent)
 ```bash
 cd "acp_agent_1"
-python acp_server.py
+uv run acp_server.py
 ```
 
 ### Terminal 2: MCP Server for ACP Agent 2 (Health Agent)
 ```bash
 cd "acp_agent_2"
-python mcp_server.py
+uv run mcp_server.py
 ```
 
 ### Terminal 3: ACP Agent 2 (Health Agent)
 ```bash
 cd "acp_agent_2"
-python acp_server.py
+uv run acp_server.py
 ```
 
 ### Terminal 4: MCP Server (Tool Orchestrator)
 ```bash
-python mcp_server.py
+uv run mcp_server.py
 ```
 
 ### Terminal 5: Router Agent (Main Interface)
 ```bash
-python router_agent.py
+uv run router_agent.py
 ```
 
 ## 💡 Usage Examples
@@ -300,10 +295,6 @@ python router_agent.py
 ## 🤝 Contributing
 
 This system demonstrates advanced multi-agent AI architecture patterns and can be extended for various domain-specific applications.
-
-## 📄 License
-
-This project is part of the ACP (Agent Communication Protocol) learning resources.
 
 ---
 
