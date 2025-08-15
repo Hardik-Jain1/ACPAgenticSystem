@@ -67,7 +67,7 @@ The system consists of multiple components working together:
   - CrewAI (Policy Agent orchestration)
 - **Communication**: 
   - ACP SDK (Agent Communication Protocol)
-  - MCP (Model Context Protocol)
+  - MCP SDK (Model Context Protocol)
 - **LLM Models**:
   - Qwen 2.5:7b (via Ollama) for SmoLAgents
   - Google Gemini 2.5 Flash for CrewAI
@@ -150,7 +150,7 @@ Modularized System/
 
 1. **Install Dependencies**:
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 2. **Environment Configuration**:
@@ -172,29 +172,29 @@ The system requires multiple components to be running simultaneously. Start them
 ### Terminal 1: ACP Agent 1 (Policy Agent)
 ```bash
 cd "acp_agent_1"
-python acp_server.py
+uv run acp_server.py
 ```
 
 ### Terminal 2: MCP Server for ACP Agent 2 (Health Agent)
 ```bash
 cd "acp_agent_2"
-python mcp_server.py
+uv run mcp_server.py
 ```
 
 ### Terminal 3: ACP Agent 2 (Health Agent)
 ```bash
 cd "acp_agent_2"
-python acp_server.py
+uv run acp_server.py
 ```
 
 ### Terminal 4: MCP Server (Tool Orchestrator)
 ```bash
-python mcp_server.py
+uv run mcp_server.py
 ```
 
 ### Terminal 5: Router Agent (Main Interface)
 ```bash
-python router_agent.py
+uv run router_agent.py
 ```
 
 ## 💡 Usage Examples
