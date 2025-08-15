@@ -90,7 +90,7 @@ The system consists of multiple components working together:
 - **Document Processing**: RAG with PDF support
 - **Web Tools**: DuckDuckGo Search, Web Page Visitor
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 Modularized System/
