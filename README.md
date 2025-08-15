@@ -82,9 +82,6 @@ Modularized System/
 ├── README.md                              # This documentation file
 ├── router_agent.py                        # Main entry point - Router Agent
 ├── mcp_server.py                          # Tool orchestrator using FastMCP
-├── multi_agent_system_flow_diag.png       # System architecture diagram
-├── multi_agent_system_seq_diag.png        # Sequence interaction diagram
-│
 ├── acp_agent_1/                           # Policy Agent (ACP Server - Port 8001)
 │   ├── acp_server.py                      # ACP server entry point
 │   ├── acp_client.py                      # ACP client for testing
@@ -94,38 +91,22 @@ Modularized System/
 │   │
 │   ├── agents/                            # CrewAI Agent definitions
 │   │   ├── crew_agents.py                 # Insurance coverage specialist agent
-│   │   └── __pycache__/                   # Python cache files
-│   │
 │   ├── crews/                             # CrewAI workflow orchestration
 │   │   ├── rag_crew.py                    # RAG crew workflow definition
-│   │   └── __pycache__/                   # Python cache files
-│   │
 │   ├── tasks/                             # CrewAI Task definitions
 │   │   ├── crew_tasks.py                  # Insurance query tasks
-│   │   └── __pycache__/                   # Python cache files
-│   │
 │   ├── tools/                             # Custom RAG tools
 │   │   ├── crew_tools.py                  # RAG tool implementation
-│   │   └── __pycache__/                   # Python cache files
-│   │
 │   ├── data/                              # Document sources
 │   │   └── gold-hospital-and-premium-extras.pdf  # Insurance policy document
-│   │
 │   └── db/                                # Vector database storage
 │       ├── chroma.sqlite3                 # Chroma database file
-│       └── 6e1e564d-93de-40bb-8c35-534f5e55ed85/  # Vector embeddings
-│           ├── data_level0.bin            # Vector data
-│           ├── header.bin                 # Database header
-│           ├── length.bin                 # Data length info
-│           └── link_lists.bin             # Vector links
 │
 └── acp_agent_2/                           # Health Agent (ACP Server - Port 8002)
     ├── acp_server.py                      # ACP server entry point
     ├── health_agent.py                    # Main health agent logic
     ├── mcp_server.py                      # Local MCP server for doctor tools
-    ├── doctors.json                       # Doctor database (240+ entries)
-    └── __pycache__/                       # Python cache files
-        └── health_agent.cpython-311.pyc   # Compiled Python cache
+    ├── doctors.json                       # Doctor database
 ```
 
 ### 📂 Key File Descriptions
