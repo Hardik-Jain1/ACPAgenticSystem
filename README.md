@@ -8,11 +8,11 @@ The system consists of multiple components working together:
 
 ### 📊 System Flow Diagram
 
-![alt text](multi_agent_system_flow_diag.png)
+![alt text](<Modularized System/multi_agent_system_flow_diag.png>)
 
 ### 🔄 Component Interaction Flow
 
-![alt text](multi_agent_system_seq_diag.png)
+![alt text](<Modularized System/multi_agent_system_seq_diag.png>)
 
 ## 🚀 Components Overview
 
